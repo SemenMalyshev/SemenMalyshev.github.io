@@ -1,2 +1,2 @@
-# SemenMalyshev.github.io
+# Cёма Малышев
 Мой первый сайт
