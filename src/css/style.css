@@ -171,11 +171,65 @@ h2 {
 }
 
 .cases img {
-    margin-top: 42px;
+    margin: 42px 0px 45px 0px;
     width: 1170px;
     height: auto;
 }
 
+.visit_site{
+    height: 172px;
+    width: 1170px;
+    margin: 0px 0px 0px 320px;
+    text-align: left;
+}
+.visit_card{
+    float: left;
+    width: 206px;
+}
+.visit_card h4{
+    float: left;
+    color: #384354;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.visit_card p{
+    float: left;
+    color: #3f495a;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+input.visit_site_button{
+    float: left;
+    margin-top: 15px;
+    height: 45px;
+    width: 200px;
+    background-color: #63b5ae;
+    border: 0px solid #63b5ae;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.info{
+    float: left;
+    margin-left: 100px;
+    width: 855px;
+}
+.info h5{
+    float: left;
+    color: #384354;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+.info p{
+    float: left;
+    color: #3f495a;
+    font-size: 16px;
+    
+}
 .cost {
     float: left;
     height: 850px;
@@ -211,13 +265,13 @@ h2 {
     width: 100%;
     background: #eeeeee;
     margin-bottom: 28px;
-    font-size: 14px;
+    font-size: 20px;
     padding-left: 15px;
     color: #737373;
 }
 
 .cost option {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .cost_and_time {
@@ -311,7 +365,7 @@ footer {
     float: left;
     height: 810px;
     width: 100%;
-    background: url(../img/Cherta.png) no-repeat 50% 130px/70px auto, url(../img/foot_background.jpg) no-repeat 50% 100%/auto 810px;
+    background: url(../img/Cherta.png) no-repeat 50% 130px/70px auto, url(../img/foot_background.jpg) no-repeat 50% 0px/auto 760px;
     color: #ffffff;
 }
 
@@ -365,8 +419,8 @@ footer h2 {
 }
 .message_form input,textarea{
     background-color: rgba(255,255,255,0.8);
-    
 }
+
 .message_form input{
     width: 344px;
     height: 30px;
@@ -377,12 +431,21 @@ footer h2 {
     height: 90px;
     margin-bottom: 30px;
 }
-
+input.send{
+    background: none;
+    height: 45px;
+    width: 125px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
 .map{
     float: left;
     height: 350px;
     width: 100%;
     background: url(../img/map.jpg) no-repeat;
+    margin-top: 80px; 
 }
 .floor{
     float: left;
