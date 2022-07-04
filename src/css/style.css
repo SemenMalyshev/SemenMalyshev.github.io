@@ -1,11 +1,15 @@
 body {
     font-family: Arial;
+    padding: 0px 0px 0px 0px;
 }
 
 nav {
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
+    z-index: 2;
+    margin-top: -80px;
 }
 
 h2 {
@@ -13,13 +17,15 @@ h2 {
     font-size: 28px;
     text-transform: uppercase;
     font-weight: bold;
+    width: 20%;
+    display: inline-block;
+
 }
 
-.logo {
+.logo span {
     color: white;
     font-size: 28px;
-    line-height: 60px;
-    margin-left: 388px;
+    margin: 15px 0px 0px 368px;
     float: left;
 }
 
@@ -32,19 +38,32 @@ h2 {
     float: left;
     line-height: 60px;
     margin-right: 40px;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     text-transform: uppercase;
 }
 
-.menu a {
+.menu li a {
     color: white;
+    transform: scale(1, 1);
+    display: block;
+    transition-duration: 0.2s;
+}
+
+.menu li a:hover {
+    transition-duration: 0.3s;
+    color: orange;
+}
+
+.menu li a:active {
+    transition-duration: 0s;
+    transform: scale(1.1, 1.1);
 }
 
 .main {
     width: 100%;
     background: url(../img/Andrew.png) 90% 100%/auto 90% no-repeat, url(../img/background.jpg) center/cover no-repeat;
-    height: calc(100% - 60px);
+    height: 100%;
 }
 
 .main_container {
@@ -72,56 +91,88 @@ h2 {
     background: none;
     border-radius: 5px;
     color: #6d7682;
-    font-size: 16px;
+    font-size: 17px;
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;
+    transform: scale(1, 1);
+}
+
+.main_container input:hover {
+    background-color: #344051;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.main_container input:active {
+    transition-duration: 0s;
+    transform: scale(1.1, 1.1);
 }
 
 .shadow {
-    box-shadow: 0px 0px 30px 0px;
+    box-shadow: 0px 0px 80px 1px;
     text-align: center;
+    height: 100%;
+    width: 100%
 }
 
 .about_me {
     height: 718px;
     width: 100%;
     float: left;
-    background: url(../img/Cherta.png) no-repeat 50% 160px/70px auto, url(../img/little_andrew.png) 50% 223px/auto 200px no-repeat;
+    background: url(../img/Cherta.png) no-repeat 50% 160px/70px 4px, url(../img/little_andrew.png) 50% 200px/auto 200px no-repeat;
+    transition-duration: 0.8s;
+}
+
+.about_me:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/10% 4px, url(../img/little_andrew.png) 50% 200px/auto 200px no-repeat;
 }
 
 .about_me h2 {
-    margin: 110px 0px 320px 0px;
+    margin: 110px 0px 300px 0px;
 }
 
 .about_me p {
     color: #263244;
-    font-size: 14px;
+    font-size: 16px;
     width: 44%;
-    margin: 45px 28% 39px 28%;
+    margin: 0px 28% 39px 28%;
     text-align: justify;
 }
 
 .about_me a {
-
+    width: 200px;
     text-align: center;
     border: 2px solid #6d7682;
-    background: url(../img/Download.png) 14px 50%/ auto 12px no-repeat;
+    background: url(../img/Download.png) 12px 50%/ auto 16px no-repeat;
     border-radius: 5px;
     color: #6d7682;
-    font-size: 12px;
+    font-size: 16px;
     padding: 9px 10px 9px 34px;
-    margin-bottom: 100px;
+    margin: 0px auto 100px auto;
+    transform: scale(1, 1);
+    display: block;
+    transition-duration: 0.3s;
+}
+
+.about_me a:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.1, 1.1);
 }
 
 .what_i_can {
     height: 520px;
     width: 100%;
     float: left;
-    background: url(../img/Cherta.png) no-repeat 50% 160px/70px auto, url(../img/background_what_i_can.jpg) 0px 0px/ auto auto no-repeat;
+    background: url(../img/Cherta.png) no-repeat 50% 160px/70px 4px, url(../img/background_what_i_can.jpg) 0px 0px/ auto auto no-repeat;
+    transition-duration: 0.8s;
+}
+
+.what_i_can:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/10% 4px, url(../img/background_what_i_can.jpg) 0px 0px/ auto auto no-repeat;
 }
 
 .what_i_can h2 {
-    margin: 108px 0px 138px 0px;
+    margin: 108px 0px 80px 0px;
 }
 
 .what_i_can_container {
@@ -129,28 +180,47 @@ h2 {
 }
 
 .what_i_can_item {
+    padding: 20px;
     float: left;
     width: 215px;
-    height: 156px;
+    height: 260px;
     margin: 0px 42px 0px 42px;
+    transition-duration: 0.8s;
+    border: 2px dotted transparent;
+
+}
+
+.what_i_can_item:hover {
+    transform: translate(7px, -7px);
+    box-shadow:
+        -1px 1px #cf7600,
+        -2px 2px #cf7600,
+        -3px 3px #cf7600,
+        -4px 4px #cf7600,
+        -5px 5px #cf7600,
+        -6px 6px #cf7600,
+        -7px 7px #cf7600;
+    transition-duration: 0.8s;
+    border: 2px solid #cf7600;
+
 }
 
 .what_i_can_item img {
     height: 49px;
     width: auto;
-    margin-bottom: 38px;
+    margin-bottom: 25px;
 }
 
 .what_i_can_item h3 {
     color: #cf7600;
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .what_i_can_item p {
     color: #3f495a;
-    font-size: 12px;
+    font-size: 16px;
 
 }
 
@@ -158,7 +228,12 @@ h2 {
     height: 1160px;
     width: 100%;
     float: left;
-    background: url(../img/Cherta.png) no-repeat 50% 160px/70px auto;
+    background: url(../img/Cherta.png) no-repeat 50% 160px/70px 4px;
+    transition-duration: 0.8s;
+}
+
+.cases:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/10% 4px;
 }
 
 .cases h2 {
@@ -167,7 +242,7 @@ h2 {
 
 .cases p {
     color: #626976;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .cases img {
@@ -176,17 +251,19 @@ h2 {
     height: auto;
 }
 
-.visit_site{
+.visit_site {
     height: 172px;
     width: 1170px;
     margin: 0px 0px 0px 320px;
     text-align: left;
 }
-.visit_card{
+
+.visit_card {
     float: left;
     width: 206px;
 }
-.visit_card h4{
+
+.visit_card h4 {
     float: left;
     color: #384354;
     text-transform: uppercase;
@@ -194,42 +271,59 @@ h2 {
     font-size: 26px;
     margin-bottom: 14px;
 }
-.visit_card p{
+
+.visit_card p {
     float: left;
     color: #3f495a;
     font-size: 16px;
     margin-bottom: 12px;
+
 }
-input.visit_site_button{
+
+input.visit_site_button {
     float: left;
     margin-top: 15px;
     height: 45px;
     width: 200px;
     background-color: #63b5ae;
-    border: 0px solid #63b5ae;
+    border: 2px solid #63b5ae;
     border-radius: 5px;
     color: white;
     font-size: 20px;
     text-transform: uppercase;
+    transition-duration: 0.4s;
+    font-weight: 500;
 }
-.info{
+
+input.visit_site_button:hover {
+    background-color: white;
+    color: #63b5ae;
+    border: 2px solid #63b5ae;
+    transition-duration: 0.4s;
+}
+
+.info {
     float: left;
     margin-left: 100px;
     width: 855px;
 }
-.info h5{
+
+.info h5 {
     float: left;
     color: #384354;
     font-weight: bold;
     font-size: 26px;
     margin-bottom: 8px;
 }
-.info p{
+
+.info p {
     float: left;
     color: #3f495a;
     font-size: 16px;
-    
+    line-height: 20px;
+
 }
+
 .cost {
     float: left;
     height: 850px;
@@ -268,10 +362,24 @@ input.visit_site_button{
     font-size: 20px;
     padding-left: 15px;
     color: #737373;
+    transition-duration: 0.8s;
+}
+
+.cost select:hover {
+    padding-left: 30px;
+    transition-duration: 0.8s;
+}
+
+.cost select:focus {
+    padding-left: 30px;
+    transition-duration: 0.3s;
+    background: #737373;
+    color: #eeeeee;
 }
 
 .cost option {
     font-size: 20px;
+    background: #737373;
 }
 
 .cost_and_time {
@@ -300,11 +408,23 @@ input.visit_site_button{
     float: left;
     width: 100%;
     height: 500px;
-    background: url(../img/Cherta.png) no-repeat 50% 160px/70px auto, url(../img/stat.background.jpg) no-repeat;
+    background: url(../img/stat.background.jpg) 50% 50%/auto 100% no-repeat;
+    background-attachment: fixed;
+}
+
+
+.stat_in {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/70px 4px;
+    transition-duration: 0.8s;
+}
+
+.stat_in:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/10% 4px;
+    transition-duration: 0.8s;
 }
 
 .stat h2 {
-    margin: 110px 0px 130px 0px;
+    margin: 110px 0px 110px 0px;
 }
 
 .stat_container {
@@ -312,10 +432,28 @@ input.visit_site_button{
 }
 
 .stat_item {
+    padding: 10px;
     float: left;
     width: 215px;
-    height: 156px;
+    height: 180px;
     margin: 0px 42px 0px 42px;
+    transition-duration: 0.8s;
+    border: 1px dotted transparent;
+}
+
+.stat_item:hover {
+    transform: translate(7px, -7px);
+    box-shadow:
+        -1px 1px #cf7600,
+        -2px 2px #cf7600,
+        -3px 3px #cf7600,
+        -4px 4px #cf7600,
+        -5px 5px #cf7600,
+        -6px 6px #cf7600,
+        -7px 7px #cf7600;
+    transition-duration: 0.8s;
+    border: 1px solid #cf7600;
+
 }
 
 .stat_item img {
@@ -342,7 +480,13 @@ input.visit_site_button{
     height: 600px;
     width: 100%;
     float: left;
-    background: url(../img/Cherta.png) no-repeat 50% 160px/70px auto, url(../img/man.png) 50% 225px/auto 100px no-repeat;
+    background: url(../img/Cherta.png) no-repeat 50% 160px/70px 4px, url(../img/man.png) 50% 225px/auto 100px no-repeat;
+    display: block;
+    transition-duration: 0.8s;
+}
+
+.reviews:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 160px/10% 4px, url(../img/man.png) 50% 215px/auto 120px no-repeat;
 }
 
 .reviews h2 {
@@ -365,13 +509,18 @@ footer {
     float: left;
     height: 810px;
     width: 100%;
-    background: url(../img/Cherta.png) no-repeat 50% 130px/70px auto, url(../img/foot_background.jpg) no-repeat 50% 0px/auto 760px;
+    background: url(../img/Cherta.png) no-repeat 50% 130px/70px 4px, url(../img/foot_background.jpg) no-repeat 50% 0px/auto 760px;
     color: #ffffff;
+    transition-duration: 0.8s;
+}
+
+footer:hover {
+    background: url(../img/Cherta.png) no-repeat 50% 130px/10% 4px, url(../img/foot_background.jpg) no-repeat 50% 0px/auto 760px;
 }
 
 footer h2 {
     color: #ffffff;
-    margin: 80px 0px 70px 0px;
+    margin: 80px 0px 60px 0px;
 }
 
 .contacts_container {
@@ -379,14 +528,21 @@ footer h2 {
     float: left;
 }
 
-.contacts p{
+.contacts p {
     margin-bottom: 50px;
+    font-size: 16px;
 }
 
 .contacts_item {
     float: left;
     width: 215px;
     margin: 0px 42px 0px 42px;
+    transform: scale(1, 1);
+    transition-duration: 0.8s;
+}
+
+.contacts_item:hover {
+    transform: scale(1.3, 1.3);
 }
 
 .contacts_item img {
@@ -397,41 +553,49 @@ footer h2 {
 
 .contacts_item h3 {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 30px;
 }
-.message{
+
+.message {
     height: 325px;
     width: 738px;
     float: left;
     margin: 0px 0px 0px calc((100% - 738px) / 2);
 }
-.message h3{
+
+.message h3 {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0px 0px 45px 0px;
 }
 
-.message_form{
+.message_form {
     width: 740px;
     height: 216px;
 }
-.message_form input,textarea{
-    background-color: rgba(255,255,255,0.8);
+
+.message_form input,
+textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    padding: 8px;
 }
 
-.message_form input{
+.message_form input {
     width: 344px;
     height: 30px;
     margin: 0px 13px 16px 13px;
 }
-.message_form textarea{
+
+.message_form textarea {
     width: 714px;
     height: 90px;
     margin-bottom: 30px;
 }
-input.send{
+
+input.send {
     background: none;
     height: 45px;
     width: 125px;
@@ -439,22 +603,38 @@ input.send{
     border-radius: 5px;
     color: white;
     font-size: 16px;
+    transition-duration: 0.4s;
+    transform: scale(1, 1);
 }
-.map{
+
+input.send:hover {
+    color: #263244;
+    background-color: white;
+    transition-duration: 0.4s;
+}
+
+input.send:active {
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.6s;
+}
+
+.map {
     float: left;
     height: 350px;
     width: 100%;
     background: url(../img/map.jpg) no-repeat;
-    margin-top: 80px; 
+    margin-top: 80px;
 }
-.floor{
+
+.floor {
     float: left;
     height: 94px;
     width: 100%;
     text-align: center;
     background: #354051;
 }
-.floor p{
-margin-top: 44px;
+
+.floor p {
+    margin-top: 44px;
     font-size: 16px;
 }
